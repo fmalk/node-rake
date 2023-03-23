@@ -1,6 +1,6 @@
 {
   "name": "node-rake",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "A NodeJS implementation of the Rapid Automatic Keyword Extraction algorithm.",
   "main": "app.js",
   "scripts": {
