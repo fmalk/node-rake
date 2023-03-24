@@ -72,8 +72,10 @@ class Rake {
       phraseScores[phrase] = 0;
       let candidateScore = 0;
       const wordList = phrase.match(/(\b[^\s]+\b)/g);
-      wordList.forEach((word) => { candidateScore += wordScore[word]; });
-      phraseScores[phrase] = candidateScore;
+      if (wordList && wordList.length > 0) {
+        wordList.forEach((word) => { candidateScore += wordScore[word]; });
+        phraseScores[phrase] = candidateScore;
+      }
     });
     return phraseScores;
   }
