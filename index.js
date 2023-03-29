@@ -89,8 +89,8 @@ class Rake {
     const phrasesList = this.generatePhrases(sentenceList);
     const wordScores = this.calculateKeywordScores(phrasesList);
     return wordScores;
-    //const phraseScores = this.calculatePhraseScores(phrasesList, wordScores);
-    //return phraseScores;
+    const phraseScores = this.calculatePhraseScores(phrasesList, wordScores);
+    return phraseScores;
     //const result = this.sortPhrases(phraseScores);
     //return result;
   }
