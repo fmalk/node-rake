@@ -40,7 +40,7 @@ class Rake {
     const wordDegree = {};
     const wordScore = {};
     phraseList.forEach((phrase) => {
-      const wordList = phrase.match(/[,.!?;:/‘’“”]|\b[0-9a-z']+\b/gi);
+      const wordList = phrase.match(/[,.!?;:/‘’“”]|\b[p{L}p{M}']+\b/giu);
       if(wordList){
         const wordListDegree = wordList.length;
         wordList.forEach((word) => {
